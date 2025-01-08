@@ -13,6 +13,7 @@ const openMenu = (data = null) => {
             images[index] = item;
             html += getButtonRender(header, message, index, isMenuHeader, isDisabled, icon);
             if (item.params) buttonParams[index] = item.params;
+            $('#container').show()
         }
     });
 
@@ -43,6 +44,7 @@ const closeMenu = () => {
     $('#imageHover').css('display' , 'none');
     buttonParams = [];
     images = [];
+    $('#container').hide()
 };
 
 const postData = (id) => {
